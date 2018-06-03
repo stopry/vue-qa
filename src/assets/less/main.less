@@ -1,0 +1,109 @@
+@import "//at.alicdn.com/t/font_81jdvs7qxjq0k9.css";
+
+@import "theme.less";
+body{
+  background: @colorBgMain;
+  font-size: @fontsize26;
+  line-height: 1.6;
+  color: @colorFontBlackShallow;
+}
+
+.container{
+  position: relative;
+  width:100vw;
+  height:100vh;
+  box-sizing: border-box;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.content{
+  box-sizing: border-box;
+  padding: 0 .6rem;
+}
+
+.float-fixed{
+  .fl{
+    float:left;
+  }
+  .fr{
+    float:right;
+  }
+  &:after{
+    content:'';
+    display: block;
+    clear:both;
+  }
+}
+
+.flex{
+  display: flex;
+  width: 100%;
+  box-align: center;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  .flex-item{
+    flex: 1;
+    min-width: 20px;
+  }
+}
+
+.inline-row{
+  .item{
+    display:inline-block;
+    vertical-align:middle;
+  }
+}
+
+.text-over{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text-right{
+  text-align: right;
+}
+
+.text-center{
+  text-align: center;
+}
+
+
+.title{
+  font-size: @fontsize32;
+  color: @colorFontBlackShallow;
+}
+.label{
+  font-size: @fontsize26;
+  color: @colorFontGrayDeep;
+}
+.tip{
+  font-size: @fontsize24;
+  color: @colorFontGrayDeep;
+}
+
+.col-success{
+  color: @colorFontGreen;
+}
+.col-warning{
+  color: @colorFontOrange;
+}
+.col-error{
+  color: @colorFontRedDeep;
+}
+.badge{
+  position: absolute;
+  right:0;
+  top:0;
+  width:.6rem;
+  height:.6rem;
+  border-radius: 50%;
+  background: @colorBgError;
+  color: @colorWhite;
+  font-size: 12px;
+  line-height: .6rem;
+  font-style: normal;
+  text-align: center;
+}
